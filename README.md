@@ -85,9 +85,9 @@ You have to ship your code to us, please create a pull request against the upstr
  **** DEMO - SOLUTION ***
 
 **************************************************************************************************************************************************************
-##############################################
-############### Important Notes ##############
-##############################################
+
+#### Important Notes
+
 
 
 A. This DEMO will create a third server called “JUMP” used to access the instance running on the private VPC
@@ -97,29 +97,33 @@ B. The chef scripts were made for Ubuntu please do you change the AMI if necessa
 C. Please add your access_key + secret_key in the file "aws.tf" also modify the following:
 
 provider "aws" {
-    access_key = "XXXXXXXXX"
-    secret_key = "XXXXXXXXX"
+
+access_key = "XXXXXXXXX"
+secret_key = "XXXXXXXXX"
+
 }
 
 variable "chef_connection" {
-    type = "map"
-    default = {
-        type = "ssh"
-        agent = "false"
-        private_key = "./ Please_Change_With_Your_Keyname.pem"
-        user = "ubuntu"
-     }
+type = "map"
+default = {
+type = "ssh"
+agent = "false"
+private_key = "./ Please_Change_With_Your_Keyname.pem"
+user = "ubuntu"
+
+}
 
 D. Finally, please add the same key name assigned in you AWS console:
 
-variable "aws_key_name" {
-    default = " Please_Change_With_Your_Keyname"
+variable "aws_key_name" 
+{
+
+default = " Please_Change_With_Your_Keyname"
+
 }
 
 
-##################################################### 
-####### Instructions for the DEMO solution ##########
-#####################################################
+### Instructions for the DEMO solution
 
 
 1. Please clon the project
